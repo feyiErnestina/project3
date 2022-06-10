@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>assign 8</title>
+</head>
+<body style="background-color:#AB46D2;">
+<fieldset>
+    <legend style:text align="center";>mavisky chopbar</legend>
+   <h1> <p style: text align="center"; b>our menu</p></h1>
+    <p id="menuItem" style: text align="center"></p>
+    <p id="userselection"></p>
+    <p id="ingredient"></p>
+    <!-- <center><input type="text" id="menuField" class="menuField" ></center> -->
+  <br> <br>
+  <center>
+    <select name="menuField" class="menuField" style : width="">
+        <option value="fufu">fufu</option>
+        <option value="banku">banku</option>
+        <option value="rice and crab-intestine">rice and crab-intestine</option>
+        <option value="kokonte">kokonte</option>
+        <option value="rice water">rice water</option>
+        </select>
+  </center>
+    
+    <br> <br>  
+    <center><input type="submit" style="background-color: #FF6FB5"; hover="background-color: blue" text align="center"; value="submit" class="menuSubmit"></center>
+    
+    <script>
+        let item1 ="fufu";
+        let item2 ="banku";
+        let item3 = "rice and crab-intestine";
+        let item4 = "kokonte";
+        let item5 = "rice water";
+        let ing1 = 'cassava water and plantain';
+        let ing2 = 'casssava dough, water and corn dough';
+        let ing3 = 'local rice and the intestine of a crab with oil, tomatoes';
+        let ing4 = 'dried cassava flour and water';
+        let ing5 = 'rice and water';
+        document.getElementById("menuItem").innerHTML ='a. '+ item1 +',  b. '+ item2 +',  c. '+ item3 +',  d. '+ item4 +' and e. '+ item5 +'.'; 
+        
+        const menuField = document.querySelector(".menuField");
+        const menuSubmit = document.querySelector('.menuSubmit');
+
+        function checkMenu(){
+            const menuValue = (menuField.value)
+
+            if(menuValue =="fufu"){
+            document.getElementById('userselection').innerHTML = 'you have selected '+ item1;
+            document.getElementById('ingredient').innerHTML = 'The ingredients are: '+ ing1;
+        }
+
+        else if(menuValue =="banku"){
+            document.getElementById('userselection').innerHTML = 'you have selected '+ item2;
+            document.getElementById('ingredient').innerHTML = 'The ingredients are: '+ ing2;
+        }
+
+         else if(menuValue =="rice and crab-intestine"){
+            document.getElementById('userselection').innerHTML = 'you have selected '+ item3;
+            document.getElementById('ingredient').innerHTML = 'The ingredients are: '+ ing3;
+        }
+
+         else if(menuValue =="kokonte"){
+            document.getElementById('userselection').innerHTML = 'you have selected '+ item4;
+            document.getElementById('ingredient').innerHTML = 'The ingredients are: '+ ing4;
+        }
+
+         else if(menuValue =="rice water"){
+            document.getElementById('userselection').innerHTML = 'you have selected '+ item5;
+            document.getElementById('ingredient').innerHTML = 'The ingredients are: '+ ing5;
+        }
+        else {
+            document.writeln('sorry we do not have your food on our menu today');
+        }
+
+        console.log(menuValue);
+    }
+        menuSubmit.addEventListener("click", checkMenu);
+        
+
+       
+    </script>
+</fieldset>
+</body>
+</html>

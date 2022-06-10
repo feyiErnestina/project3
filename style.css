@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    color: #55D8C1;
+    font-size: large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+#menuItem{
+    color: #FFFFFF;
+}
+
+body{
+    background: url(./img/igm.1.jpg) no-repeat center center/cover;
+}
+
+    
